@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
         <header>
           <Navigation />
         </header>
-        <main className="min-h-screen px-5 md:px-8">{children}</main>
+        <main className="min-h-screen px-6 mb-20 md:px-8">{children}</main>
         <footer>
           <Footer />
         </footer>

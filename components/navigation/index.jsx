@@ -8,7 +8,7 @@ import MobileNav from "./mobile-nav";
 const Navigation = () => {
   const [openMobNav, setOpenMobNav] = useState(false);
   return (
-    <div className="flex justify-between items-center p-5 h-17 bg-white shadow-lg mb-7 md:px-8">
+    <div className="flex justify-between items-center py-5 px-6 h-17 bg-white shadow-lg mb-7 md:px-8">
       <div className="flex justify-start">
         <FontAwesomeIcon
           icon={faHeading}

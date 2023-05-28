@@ -17,9 +17,10 @@ module.exports = {
       },
       height: {
         17: "72px",
+        "1px": "1px",
       },
       backgroundColor: {
-        layout: "#f8f9fa",
+        layout: "#e9ecef",
       },
       lineHeight: {
         "48px": "48px",
