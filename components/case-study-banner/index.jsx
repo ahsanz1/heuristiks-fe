@@ -11,21 +11,9 @@ const CaseStudyBanner = async ({
   BackgroundColor,
   BackgroundImage,
 }) => {
-  // const pageData = await fetchPage("home");
-  // const caseStudyBannerProps = pageData.content.body[0];
-  // const {
-  //   Title,
-  //   Headline,
-  //   CTAlink,
-  //   CTAtext,
-  //   BackgroundColor,
-  //   BackgroundImage,
-  // } = caseStudyBannerProps;
-  // //   console.log(caseStudyBannerProps);
-  // console.log("BackgroundImage: ", BackgroundImage);
   return (
     <div
-      className="flex flex-col justify-between rounded-md md:flex-row-reverse items-center md:max-h-[650px]"
+      className="flex flex-col justify-between rounded-md cursor-pointer transition-transform duration-500 transform-gpu hover:scale-[0.99] md:flex-row-reverse items-center md:max-h-[650px]"
       style={{ backgroundColor: BackgroundColor }}
     >
       <div className="p-1 w-full flex-1 md:h-[650px] md:relative">
