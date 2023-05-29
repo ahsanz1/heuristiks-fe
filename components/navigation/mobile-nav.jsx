@@ -1,11 +1,14 @@
+"use client";
 import { faHeading, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
 
 const MobileNav = ({ openMobNav, setOpenMobNav }) => {
-  if (openMobNav) document.body.style.overflow = "hidden";
-  else document.body.style.overflow = "unset";
+  useEffect(() => {
+    if (openMobNav) document.body.style.overflow = "hidden";
+    else document.body.style.overflow = "unset";
+  }, [openMobNav]);
 
   return (
     <div
