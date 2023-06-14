@@ -1,9 +1,13 @@
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Inter, League_Spartan } from "next/font/google";
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
+const leagueSpartan = League_Spartan({
+  subsets: ["latin"],
+  variable: "--font-lSpartan",
+});
 
 export const metadata = {
   title: "Create Next App",
@@ -15,15 +19,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-layout`}>
-        <header>
-          <Navigation />
-        </header>
-        <main className="min-h-screen px-6 mb-20 md:px-8">{children}</main>
-        <footer>
-          <Footer />
-        </footer>
-      </body>
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+      ></meta>
+      <body className={`${leagueSpartan.variable} font-sans`}>{children}</body>
     </html>
   );
 }

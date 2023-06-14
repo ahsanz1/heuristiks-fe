@@ -14,7 +14,7 @@ const TitleDescriptionTextCards = ({ Title, Description, TextCardsTable }) => {
         {TextCardsTable.tbody.map((row) => (
           <div className="px-6 pt-6 pb-8 bg-white md:px-12 md:pt-12 md:pb-16">
             <h3 className="text-2xl leading-9 mb-2">{row.body[0].value}</h3>
-            <p className="text-base leading-7 font-light">
+            <p className="text-xl leading-7 font-light">
               {row.body[1].value}
             </p>
             <span className="w-12 h-1px block bg-black mt-6 md:mt-10"></span>

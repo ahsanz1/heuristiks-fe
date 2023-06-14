@@ -25,11 +25,11 @@ const Footer = async () => {
   return (
     <div className="flex flex-col bg-black text-white px-6 py-12 md:px-8">
       <div className="flex flex-col gap-y-4 md:flex-row md:justify-between md:pl-28 md:pr-72">
-        <h1 className="font-sans font-bold text-7xl mb-6">H.</h1>
+        <h1 className="font-sans font-bold text-7xl mb-6">heuristiks.</h1>
         <div className="flex flex-col gap-y-4 font-sans mt-3">
           {CTATable1.tbody.map((row) => (
             <Link href={row.body[1].value}>
-              <p className="font-bold text-base">{row.body[0].value}</p>
+              <p className="font-bold text-lg">{row.body[0].value}</p>
             </Link>
           ))}
         </div>
@@ -38,7 +38,7 @@ const Footer = async () => {
             <Link href={row.body[1].value}>
               <p
                 className={`${
-                  idx === 0 ? "font-bold text-base" : "font-medium text-sm"
+                  idx === 0 ? "font-bold text-lg" : "font-medium text-sm"
                 }`}
               >
                 {row.body[0].value}
@@ -51,7 +51,7 @@ const Footer = async () => {
             <Link href={row.body[1].value}>
               <p
                 className={`${
-                  idx === 0 ? "font-bold text-base" : "font-medium text-sm"
+                  idx === 0 ? "font-bold text-lg" : "font-medium text-sm"
                 }`}
               >
                 {row.body[0].value}
@@ -64,7 +64,7 @@ const Footer = async () => {
         </Link>
       </div>
       <div className="mt-2 font-sans md:mt-12 md:flex flex-row justify-center">
-        <p className="text-xs font-light">
+        <p className="text-sm font-light">
           {BottomText} |{" "}
           <Link href={BottomCTA1Url} className="font-medium underline">
             {BottomCTA1Text}

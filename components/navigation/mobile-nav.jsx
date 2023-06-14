@@ -22,7 +22,7 @@ const MobileNav = ({ openMobNav, setOpenMobNav }) => {
         }`}
       >
         <div className="flex flex-row justify-between items-center h-17 px-8 py-3">
-          <FontAwesomeIcon icon={faHeading} fontSize="24px" color="white" />
+          {/* <FontAwesomeIcon icon={faHeading} fontSize="24px" color="white" /> */}
           <FontAwesomeIcon
             icon={faXmark}
             onClick={setOpenMobNav}

@@ -7,7 +7,7 @@ import MobileNav from "./mobile-nav";
 import Nav from "./nav";
 import StickyNav from "./sticky-nav";
 
-const Navigation = () => {
+const Navigation = ({ bgClassName }) => {
   const [openMobNav, setOpenMobNav] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
   const [prevScrollY, setPrevScrollY] = useState(0);
@@ -25,7 +25,7 @@ const Navigation = () => {
   }, []);
 
   return (
-    <div className="w-screen">
+    <div className={`w-screen ${bgClassName}`}>
       <Nav
         className={isSticky ? "hidden" : "flex"}
         openMobNav={openMobNav}
