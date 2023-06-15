@@ -21,7 +21,7 @@ const TwoColumnTextWithImage = ({
           ImagePosition[0] === "bottom"
             ? "md:flex-row"
             : ImagePosition[0] === "right"
-            ? "md:flex-col md:justify-center md:py-[20%]"
+            ? "md:flex-col md:justify-center md:py-[15%]"
             : "md:flex-row"
         }`}
       >
