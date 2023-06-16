@@ -10,7 +10,7 @@ import React from "react";
 const Footer = async () => {
   const { rels } = await fetchPage("home");
   const footerProps = rels.find((r) => r.name.toLowerCase() === "footer");
-  if (!footerProps) return <h3>Footer Values Empty</h3>;
+  if (!footerProps) return <h3>Footer NOT FOUND!</h3>;
 
   const { CTATable1 = {} } = footerProps?.content?.global[0];
   const { CTATable2 = {} } = footerProps?.content?.global[0];

@@ -1,16 +1,19 @@
 "use client";
-import { faBars, faHeading } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Link from "next/link";
+import { fetchPage } from "@/utils";
 import React, { useEffect, useState } from "react";
 import MobileNav from "./mobile-nav";
 import Nav from "./nav";
 import StickyNav from "./sticky-nav";
 
-const Navigation = ({ bgClassName }) => {
+const Navigation = ({
+  bgClassName,
+  HeaderCTALinks,
+  ServicesCTAs,
+  ButtonLink,
+  ButtonText,
+}) => {
   const [openMobNav, setOpenMobNav] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
-  const [prevScrollY, setPrevScrollY] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,16 +33,24 @@ const Navigation = ({ bgClassName }) => {
         className={isSticky ? "hidden" : "flex"}
         openMobNav={openMobNav}
         setOpenMobNav={setOpenMobNav}
+        HeaderCTALinks={HeaderCTALinks}
+        ButtonLink={ButtonLink}
+        ButtonText={ButtonText}
+        ServicesCTAs={ServicesCTAs}
       />
       <StickyNav
         className={isSticky ? "translate-y-0" : "-translate-y-full"}
         openMobNav={openMobNav}
         setOpenMobNav={setOpenMobNav}
+        HeaderCTALinks={HeaderCTALinks}
+        ButtonLink={ButtonLink}
+        ButtonText={ButtonText}
+        ServicesCTAs={ServicesCTAs}
       />
-      <MobileNav
+      {/* <MobileNav
         openMobNav={openMobNav}
         setOpenMobNav={(e) => setOpenMobNav(!openMobNav)}
-      />
+      /> */}
     </div>
   );
 };

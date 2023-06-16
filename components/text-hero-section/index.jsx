@@ -38,7 +38,7 @@ const TextHeroSection = ({ Heading, Subtitle, CTAText }) => {
           }}
           onClick={(e) => {
             e.preventDefault();
-            window.scrollTo({ top: 450, behavior: "smooth" });
+            window.scrollTo({ top: 625, behavior: "smooth" });
           }}
         >
           <p className="text-base font-semibold leading-[26px] md:text-2xl">

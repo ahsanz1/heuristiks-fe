@@ -1,4 +1,8 @@
-import React from "react";
+"use client";
+
+import Aos from "aos";
+import React, { useEffect } from "react";
+import "aos/dist/aos.css";
 import "./style.scss";
 
 const TwoColumnTextWithImage = ({
@@ -10,8 +14,14 @@ const TwoColumnTextWithImage = ({
   HeadingUppercase = false,
   ImagePosition = "",
 }) => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
+
   return (
     <div
+      data-aos="fade-in"
+      data-aos-duration="2500"
       className={`flex flex-col items-start ${
         ImagePosition[0] === "right" ? "md:flex-row md:gap-x-28" : ""
       } md:mx-32`}
